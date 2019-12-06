@@ -33,10 +33,10 @@ public class JsonUtils {
 
     private static List<String> jsonArrayToList(JSONObject jsonObject, String parameter) throws JSONException {
         List<String> newList = new ArrayList<>();
-        JSONArray alsoKnownAsArray = jsonObject.getJSONArray(parameter);
+        JSONArray jsonArray = jsonObject.getJSONArray(parameter);
 
-        for (int i = 0; i < alsoKnownAsArray.length(); i++) {
-            newList.add(alsoKnownAsArray.getString(i));
+        for (int i = 0; i < jsonArray.length(); i++) {
+            newList.add(jsonArray.getString(i));
         }
 
         return newList;
